@@ -3,7 +3,6 @@
     file="$(find gazebo_ros)/launch/empty_world.launch" />
 
 
-  
   <!-- Load the URDF into the ROS Parameter Server -->
   <param name="robot_description"
     command="$(find xacro)/xacro '$(find jumpbot_description)/urdf/jumpbot_v9.urdf.xacro'" />
@@ -16,6 +15,8 @@
     output="screen"
     args="-urdf -model jumpbot -param robot_description -z 0.4"/>
 
+
+  <include file="$(find jumpbot_control)/launch/servo_control.launch" />
 
 
 </launch>

@@ -1,17 +1,22 @@
 <launch>
 
   <!-- Load joint controller configurations from YAML file to parameter server -->
-  <rosparam file="$(find servo_control)/config/servo_control.yaml" command="load"/>
+  <rosparam file="$(find jumpbot_control)/config/jumpbot_servo_control.yaml" command="load"/>
 
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-	output="screen" ns="/servo" args="joint_state_controller
-					  joint1_position_controller"/>
+	output="screen" ns="/jumpbot" args="joint_state_controller
+					  R_arm1_joint_position_controller 
+            R_arm2_joint_position_controller 
+            R_arm3_joint_position_controller 
+            L_arm1_joint_position_controller 
+            L_arm2_joint_position_controller 
+            L_arm3_joint_position_controller"/>
 
   <!-- convert joint states to TF transforms for rviz, etc -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
 	respawn="false" output="screen">
-    <remap from="/joint_states" to="/servo/joint_states" />
+    <remap from="/joint_states" to="/jumpbot_servo/joint_states" />
   </node>
 
 </launch>

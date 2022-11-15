@@ -1,10 +1,66 @@
 <robot name="jumpbot">
-    <transmission name="tran1">
+    <transmission name="R_arm1_joint">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="R_arm1_joint">
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         </joint>
         <actuator name="motor1">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="R_arm2_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="R_arm2_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor2">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+
+    <transmission name="R_arm3_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="R_arm3_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor3">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="L_arm1_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="L_arm1_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor4">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="L_arm2_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="L_arm2_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor5">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="L_arm3_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="L_arm3_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor6">
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
         </actuator>
