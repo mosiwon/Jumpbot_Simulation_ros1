@@ -1,0 +1,1480 @@
+<sdf version='1.7'>
+  <model name='testjumpbot'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0.080939 -0 -0.026812 0 -0 0</pose>
+        <mass>0.21719</mass>
+        <inertia>
+          <ixx>6.94e-05</ixx>
+          <ixy>8.13532e-21</ixy>
+          <ixz>4.23516e-21</ixz>
+          <iyy>0.000141175</iyy>
+          <iyz>-2.15898e-20</iyz>
+          <izz>0.000162678</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='L_baselink_joint' type='revolute'>
+      <pose relative_to='base_link'>0.1065 0.045 -0.033 1.5708 0 -1.5708</pose>
+      <parent>base_link</parent>
+      <child>L_baselink</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_baselink'>
+      <pose relative_to='L_baselink_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.053411 -0.054639 0.03305 0 -0 0</pose>
+        <mass>0.573132</mass>
+        <inertia>
+          <ixx>0.00103571</ixx>
+          <ixy>5.37563e-07</ixy>
+          <ixz>6.83333e-07</ixz>
+          <iyy>0.000616027</iyy>
+          <iyz>2.40896e-06</iyz>
+          <izz>0.000613586</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_baselink_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_baselink.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_baselink_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_baselink.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='L_arm1_joint' type='revolute'>
+      <pose relative_to='L_baselink'>-0.1025 -0.0175 0.023998 1.5708 -1.4572 -1.5708</pose>
+      <parent>L_baselink</parent>
+      <child>L_arm1</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_arm1'>
+      <pose relative_to='L_arm1_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.005792 -0.000661 0.0393 0 -0 0</pose>
+        <mass>0.0772345</mass>
+        <inertia>
+          <ixx>2.16416e-05</ixx>
+          <ixy>-4.84133e-07</ixy>
+          <ixz>1.96292e-07</ixz>
+          <iyy>2.58317e-05</iyy>
+          <iyz>2.23852e-08</iyz>
+          <izz>1.51644e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_arm1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_arm1.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_arm1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_arm1.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='L_arm2_joint' type='revolute'>
+      <pose relative_to='L_arm1'>-0.03552 -0.004051 0.05 -3.02804 -1.57079 3.14159</pose>
+      <parent>L_arm1</parent>
+      <child>L_arm2</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_arm2'>
+      <pose relative_to='L_arm2_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.07421 0 -0.029391 0 -0 0</pose>
+        <mass>0.0880267</mass>
+        <inertia>
+          <ixx>2.12845e-05</ixx>
+          <ixy>-6.83235e-16</ixy>
+          <ixz>1.03652e-05</ixz>
+          <iyy>5.43768e-05</iyy>
+          <iyz>2.14005e-16</iyz>
+          <izz>4.55078e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_arm2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_arm2.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_arm2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_arm2.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='L_arm3_joint' type='revolute'>
+      <pose relative_to='L_arm2'>0.09 0 -0.063 3.14159 -0 -3.14159</pose>
+      <parent>L_arm2</parent>
+      <child>L_arm3</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_arm3'>
+      <pose relative_to='L_arm3_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.084623 -0.00497 -0.01488 0 -0 0</pose>
+        <mass>0.0621671</mass>
+        <inertia>
+          <ixx>6.26827e-05</ixx>
+          <ixy>-3.66086e-06</ixy>
+          <ixz>-6.94541e-06</ixz>
+          <iyy>0.00014217</iyy>
+          <iyz>-4.70113e-07</iyz>
+          <izz>8.17963e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_arm3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_arm3.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_arm3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_arm3.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='L_cam_joint' type='revolute'>
+      <pose relative_to='L_baselink'>-0.062 -0.091531 -0.00417 1.5708 -1.45725 -1.5708</pose>
+      <parent>L_baselink</parent>
+      <child>L_cam</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_cam'>
+      <pose relative_to='L_cam_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.012367 -0.003215 -0.006663 0 -0 0</pose>
+        <mass>0.0218371</mass>
+        <inertia>
+          <ixx>6.80512e-06</ixx>
+          <ixy>3.75834e-06</ixy>
+          <ixz>4.41665e-08</ixz>
+          <iyy>9.48114e-06</iyy>
+          <iyz>1.13545e-08</iyz>
+          <izz>1.567e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_cam_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_cam.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_cam_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_cam.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='L_leg2_joint' type='revolute'>
+      <pose relative_to='L_baselink'>-0.066 -0.125483 0.0453 1.5708 -1.0069 -1.5708</pose>
+      <parent>L_baselink</parent>
+      <child>L_leg2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_leg2'>
+      <pose relative_to='L_leg2_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.043357 -0.013979 -0.01 0 -0 0</pose>
+        <mass>0.0913705</mass>
+        <inertia>
+          <ixx>1.59116e-05</ixx>
+          <ixy>-9.15274e-06</ixy>
+          <ixz>-1.28273e-19</ixz>
+          <iyy>0.000107719</iyy>
+          <iyz>-1.52578e-20</iyz>
+          <izz>0.000115555</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_leg2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_leg2.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_leg2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_leg2.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='L_leg1_R_joint' type='revolute'>
+      <pose relative_to='L_leg2'>0.15 0 0.02 0 -0 0.450348</pose>
+      <parent>L_leg2</parent>
+      <child>L_leg1_R</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_leg1_R'>
+      <pose relative_to='L_leg1_R_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.09113 -0.091721 -0.040687 0 -0 0</pose>
+        <mass>0.233562</mass>
+        <inertia>
+          <ixx>0.000296577</ixx>
+          <ixy>-0.00018317</ixy>
+          <ixz>3.50787e-05</ixz>
+          <iyy>0.000294209</iyy>
+          <iyz>3.53061e-05</iyz>
+          <izz>0.00041332</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_leg1_R_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_leg1_R.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='L_leg1_R_fixed_joint_lump__L_motor_collision_1'>
+        <pose>-0.105723 -0.106408 0.042 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_motor.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_leg1_R_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_leg1_R.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='L_leg1_R_fixed_joint_lump__L_motor_visual_1'>
+        <pose>-0.105723 -0.106408 0.042 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_motor.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='L_wheel_joint' type='revolute'>
+      <pose relative_to='L_leg1_R'>-0.105723 -0.106408 0.042 0 -0 0</pose>
+      <parent>L_leg1_R</parent>
+      <child>L_wheel</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_wheel'>
+      <pose relative_to='L_wheel_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0 -0.010926 0 -0 0</pose>
+        <mass>0.263999</mass>
+        <inertia>
+          <ixx>0.000320343</ixx>
+          <ixy>1.39363e-19</ixy>
+          <ixz>-6.94398e-16</ixz>
+          <iyy>0.000320343</iyy>
+          <iyz>6.08514e-15</iyz>
+          <izz>0.000616989</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_wheel_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_wheel.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_wheel_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_wheel.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='L_leg3_joint' type='revolute'>
+      <pose relative_to='L_baselink'>-0.066 -0.088353 0.082416 1.5708 -0.85393 -1.5708</pose>
+      <parent>L_baselink</parent>
+      <child>L_leg3</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_leg3'>
+      <pose relative_to='L_leg3_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.087332 0.011068 -0.01 0 -0 0</pose>
+        <mass>0.0493853</mass>
+        <inertia>
+          <ixx>5.91254e-06</ixx>
+          <ixy>-3.96516e-06</ixy>
+          <ixz>9.87009e-17</ixz>
+          <iyy>0.000100372</iyy>
+          <iyz>5.39057e-17</iyz>
+          <izz>0.000102536</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_leg3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_leg3.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_leg3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_leg3.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='L_leg1_L_joint' type='revolute'>
+      <pose relative_to='L_leg3'>0.15 0 -0.04 0 0 -1.74965</pose>
+      <parent>L_leg3</parent>
+      <child>L_leg1_L</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_leg1_L'>
+      <pose relative_to='L_leg1_L_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.103257 -0 0.052434 0 -0 0</pose>
+        <mass>0.0488234</mass>
+        <inertia>
+          <ixx>1.13633e-05</ixx>
+          <ixy>3.35348e-16</ixy>
+          <ixz>8.4615e-06</ixz>
+          <iyy>0.000183746</iyy>
+          <iyz>-1.3433e-16</iyz>
+          <izz>0.000190643</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_leg1_L_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_leg1_L.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='L_leg1_L_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/L_leg1_L.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='R_baselink_joint' type='revolute'>
+      <pose relative_to='base_link'>0.1065 -0.045 -0.033 1.5708 0 -1.5708</pose>
+      <parent>base_link</parent>
+      <child>R_baselink</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_baselink'>
+      <pose relative_to='R_baselink_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.053411 -0.054626 0.033041 0 -0 0</pose>
+        <mass>0.573138</mass>
+        <inertia>
+          <ixx>0.00103579</ixx>
+          <ixy>-5.37742e-07</ixy>
+          <ixz>-6.8322e-07</ixz>
+          <iyy>0.000615653</iyy>
+          <iyz>2.20571e-06</iyz>
+          <izz>0.000614044</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_baselink_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_baselink.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='R_baselink_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_baselink.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='R_arm1_joint' type='revolute'>
+      <pose relative_to='R_baselink'>0.1025 -0.0175 0.023998 1.5708 -1.4572 -1.5708</pose>
+      <parent>R_baselink</parent>
+      <child>R_arm1</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_arm1'>
+      <pose relative_to='R_arm1_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.005792 0.000661 -0.0393 0 -0 0</pose>
+        <mass>0.0772345</mass>
+        <inertia>
+          <ixx>2.16416e-05</ixx>
+          <ixy>-4.84133e-07</ixy>
+          <ixz>1.96292e-07</ixz>
+          <iyy>2.58317e-05</iyy>
+          <iyz>2.23852e-08</iyz>
+          <izz>1.51644e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_arm1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_arm1.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='R_arm1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_arm1.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='R_arm2_joint' type='revolute'>
+      <pose relative_to='R_arm1'>0.03552 0.004051 -0.05 3.02804 1.57079 3.14159</pose>
+      <parent>R_arm1</parent>
+      <child>R_arm2</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_arm2'>
+      <pose relative_to='R_arm2_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.07421 -0 -0.029391 0 -0 0</pose>
+        <mass>0.0880267</mass>
+        <inertia>
+          <ixx>2.12845e-05</ixx>
+          <ixy>6.83248e-16</ixy>
+          <ixz>1.03652e-05</ixz>
+          <iyy>5.43768e-05</iyy>
+          <iyz>-2.14007e-16</iyz>
+          <izz>4.55078e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_arm2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_arm2.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='R_arm2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_arm2.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='joint1' type='revolute'>
+      <pose relative_to='R_arm2'>0.09 0 -0.063 3.14159 -0 3.14159</pose>
+      <parent>R_arm2</parent>
+      <child>R_arm3</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <effort>0</effort>
+          <velocity>0</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_arm3'>
+      <pose relative_to='joint1'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.084623 -0.00497 -0.01488 0 -0 0</pose>
+        <mass>0.0621671</mass>
+        <inertia>
+          <ixx>6.26827e-05</ixx>
+          <ixy>-3.66086e-06</ixy>
+          <ixz>-6.94541e-06</ixz>
+          <iyy>0.00014217</iyy>
+          <iyz>-4.70113e-07</iyz>
+          <izz>8.17963e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_arm3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_arm3.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='R_arm3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_arm3.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='R_cam_joint' type='revolute'>
+      <pose relative_to='R_baselink'>0.049 -0.091531 -0.00417 1.5708 -1.45725 -1.5708</pose>
+      <parent>R_baselink</parent>
+      <child>R_cam</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_cam'>
+      <pose relative_to='R_cam_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.012367 -0.003215 -0.006337 0 -0 0</pose>
+        <mass>0.0218371</mass>
+        <inertia>
+          <ixx>6.80443e-06</ixx>
+          <ixy>3.75802e-06</ixy>
+          <ixz>-4.40765e-08</ixz>
+          <iyy>9.48117e-06</iyy>
+          <iyz>-1.14659e-08</iyz>
+          <izz>1.56693e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_cam_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_cam.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='R_cam_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_cam.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='R_leg2_joint' type='revolute'>
+      <pose relative_to='R_baselink'>0.066 -0.125483 0.0453 1.5708 -1.00668 -1.5708</pose>
+      <parent>R_baselink</parent>
+      <child>R_leg2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_leg2'>
+      <pose relative_to='R_leg2_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.043357 -0.013979 0.01 0 -0 0</pose>
+        <mass>0.0913705</mass>
+        <inertia>
+          <ixx>1.59116e-05</ixx>
+          <ixy>-9.15274e-06</ixy>
+          <ixz>-2.39495e-20</ixz>
+          <iyy>0.000107719</iyy>
+          <iyz>-2.21816e-20</iyz>
+          <izz>0.000115555</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_leg2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_leg2.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='R_leg2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_leg2.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='R_leg1_L_joint' type='revolute'>
+      <pose relative_to='R_leg2'>0.15 0 0.04 0 -0 0.450565</pose>
+      <parent>R_leg2</parent>
+      <child>R_leg1_L</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_leg1_L'>
+      <pose relative_to='R_leg1_L_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.091111 -0.09174 -0.019313 0 -0 0</pose>
+        <mass>0.233562</mass>
+        <inertia>
+          <ixx>0.000296654</ixx>
+          <ixy>-0.000183168</ixy>
+          <ixz>-3.50701e-05</ixz>
+          <iyy>0.000294129</iyy>
+          <iyz>-3.53142e-05</iyz>
+          <izz>0.000413317</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_leg1_L_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_leg1_L.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='R_leg1_L_fixed_joint_lump__R_motor_collision_1'>
+        <pose>-0.1057 -0.10643 -0.102 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_motor.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='R_leg1_L_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_leg1_L.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='R_leg1_L_fixed_joint_lump__R_motor_visual_1'>
+        <pose>-0.1057 -0.10643 -0.102 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_motor.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='R_wheel_joint' type='revolute'>
+      <pose relative_to='R_leg1_L'>-0.1057 -0.10643 -0.102 0 -0 0</pose>
+      <parent>R_leg1_L</parent>
+      <child>R_wheel</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_wheel'>
+      <pose relative_to='R_wheel_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0 0.010926 0 -0 0</pose>
+        <mass>0.263999</mass>
+        <inertia>
+          <ixx>0.000320343</ixx>
+          <ixy>-1.61655e-19</ixy>
+          <ixz>-6.94631e-16</ixz>
+          <iyy>0.000320343</iyy>
+          <iyz>6.08536e-15</iyz>
+          <izz>0.000616989</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_wheel_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_wheel.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='R_wheel_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_wheel.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='R_leg3_joint' type='revolute'>
+      <pose relative_to='R_baselink'>0.066 -0.088353 0.082416 1.5708 -0.853722 -1.5708</pose>
+      <parent>R_baselink</parent>
+      <child>R_leg3</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_leg3'>
+      <pose relative_to='R_leg3_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.087332 0.011068 0.01 0 -0 0</pose>
+        <mass>0.0493853</mass>
+        <inertia>
+          <ixx>5.91254e-06</ixx>
+          <ixy>-3.96516e-06</ixy>
+          <ixz>1.57801e-20</ixz>
+          <iyy>0.000100372</iyy>
+          <iyz>4.39805e-21</iyz>
+          <izz>0.000102536</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_leg3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_leg3.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='R_leg3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_leg3.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name='R_leg1_R_joint' type='revolute'>
+      <pose relative_to='R_leg3'>0.15 0 0.04 0 0 -1.74927</pose>
+      <parent>R_leg3</parent>
+      <child>R_leg1_R</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_leg1_R'>
+      <pose relative_to='R_leg1_R_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.103257 -0 -0.052434 0 -0 0</pose>
+        <mass>0.0488234</mass>
+        <inertia>
+          <ixx>1.13633e-05</ixx>
+          <ixy>1.05326e-12</ixy>
+          <ixz>-8.4615e-06</ixz>
+          <iyy>0.000183746</iyy>
+          <iyz>5.16997e-14</iyz>
+          <izz>0.000190643</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_leg1_R_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_leg1_R.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.2</mu>
+              <mu2>0.2</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='R_leg1_R_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://testjumpbot/meshes/R_leg1_R.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <static>0</static>
+    <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+      <robotNamespace>/servo</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </model>
+</sdf>
