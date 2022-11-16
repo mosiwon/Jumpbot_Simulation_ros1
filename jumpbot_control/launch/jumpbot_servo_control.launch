@@ -19,4 +19,7 @@
     <remap from="/joint_states" to="/jumpbot_servo/joint_states" />
   </node>
 
+  <include file="$(find jumpbot_control)/launch/arm_joint_position.launch" />
+
+
 </launch>
