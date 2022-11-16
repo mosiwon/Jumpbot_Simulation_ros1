@@ -141,7 +141,7 @@
       link="L_arm1" />
     <axis
       xyz="0 0 -1" />
-    <limit effort="10" velocity="10" lower="-1.5707" upper="1.5707"/>
+    <limit effort="1" velocity="1" lower="-1.5707" upper="1.5707"/>
   </joint>
   <joint
     name="L_arm2_joint"
@@ -155,7 +155,7 @@
       link="L_arm2" />
     <axis
       xyz="0 0 -1" />
-    <limit effort="10" velocity="10" lower="-1.5707" upper="1.5707"/>
+    <limit effort="1" velocity="1" lower="-1.5707" upper="1.5707"/>
   </joint>
   <joint
     name="L_arm3_joint"
@@ -169,7 +169,7 @@
       link="L_arm3" />
     <axis
       xyz="0 0 -1" />
-    <limit effort="10" velocity="10" lower="-1.5707" upper="1.5707"/>
+    <limit effort="1" velocity="1" lower="-1.5707" upper="1.5707"/>
   </joint>
   <joint
     name="R_baselink_joint"
@@ -312,7 +312,7 @@
       link="R_arm1" />
     <axis
       xyz="0 0 1" />
-    <limit effort="10" velocity="10" lower="-1.5707" upper="1.5707"/>
+    <limit effort="1" velocity="1" lower="-1.5707" upper="1.5707"/>
   </joint>
 
   <joint
@@ -327,7 +327,7 @@
       link="R_arm2" />
     <axis
       xyz="0 0 -1" />
-    <limit effort="10" velocity="10" lower="-1.5707" upper="1.5707"/>
+    <limit effort="1" velocity="1" lower="-1.5707" upper="1.5707"/>
   </joint>
 
   <joint
@@ -342,6 +342,6 @@
       link="R_arm3" />
     <axis
       xyz="0 0 -1" />
-    <limit effort="10" velocity="10" lower="-1.5707" upper="1.5707"/>
+    <limit effort="1" velocity="1" lower="-1.5707" upper="1.5707"/>
   </joint>
 </robot>
