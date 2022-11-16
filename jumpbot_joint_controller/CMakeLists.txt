@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(joint_controller)
+project(jumpbot_joint_controller)
 add_compile_options(-std=c++11)
 
 find_package(catkin REQUIRED
@@ -22,6 +22,6 @@ install(DIRECTORY src
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
 
-add_executable(strt_script src/joint_state_publisher.cpp)
+add_executable(start_script src/jumpbot_joint_state_publisher.cpp)
 
-target_link_libraries(strt_script ${catkin_LIBRARIES})
+target_link_libraries(start_script ${catkin_LIBRARIES})
