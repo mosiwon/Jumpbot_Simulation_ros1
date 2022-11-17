@@ -22,6 +22,6 @@ install(DIRECTORY src
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
 
-add_executable(start_script src/jumpbot_joint_state_publisher.cpp)
+add_executable(arm_rotate src/arm_rotate.cpp)
 
-target_link_libraries(start_script ${catkin_LIBRARIES})
+target_link_libraries(arm_rotate ${catkin_LIBRARIES})
