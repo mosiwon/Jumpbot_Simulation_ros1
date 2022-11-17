@@ -65,4 +65,26 @@
         <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
+
+    <transmission name="L_baselink_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="L_baselink_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor7">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="R_baselink_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="R_baselink_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor8">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
 </robot>

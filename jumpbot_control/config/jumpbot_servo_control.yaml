@@ -34,3 +34,13 @@ jumpbot:
     type: effort_controllers/JointPositionController
     joint: L_arm3_joint
     pid: {p: 350.0, i: 0.01, d: 5.0, i_clamp_min: -10, i_clamp_max: 10}
+
+  L_baselink_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: L_baselink_joint
+    pid: {p: 700.0, i: 0.01, d: 5.0, i_clamp_min: -10, i_clamp_max: 10}
+
+  R_baselink_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: R_baselink_joint
+    pid: {p: 700.0, i: 0.01, d: 5.0, i_clamp_min: -10, i_clamp_max: 10}

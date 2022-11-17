@@ -11,7 +11,10 @@
             R_arm3_joint_position_controller 
             L_arm1_joint_position_controller 
             L_arm2_joint_position_controller 
-            L_arm3_joint_position_controller"/>
+            L_arm3_joint_position_controller
+            L_baselink_joint_position_controller
+            R_baselink_joint_position_controller
+            "/>
 
   
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
