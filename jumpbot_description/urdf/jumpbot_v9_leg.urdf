@@ -1,0 +1,326 @@
+<?xml version="1.0" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="jumpbot" xmlns:xacro="http://ros.org/wiki/xacro">
+<link
+    name="L_leg3">
+    <inertial>
+      <origin
+        xyz="0.0873324965817303 0.011067795869679 -0.0100000000002772"
+        rpy="0 0 0" />
+      <mass
+        value="0.04938529189609" />
+      <inertia
+        ixx="5.91254112996405E-06"
+        ixy="-3.96515991620095E-06"
+        ixz="9.8700864156177E-17"
+        iyy="0.00010037156503426"
+        iyz="5.39056562665093E-17"
+        izz="0.000102535598937443" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/L_leg3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/L_leg3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="L_leg1_L">
+    <inertial>
+      <origin
+        xyz="0.103256583074139 -1.25571775200228E-12 0.0524343515325116"
+        rpy="0 0 0" />
+      <mass
+        value="0.0488233854097336" />
+      <inertia
+        ixx="1.13633089013212E-05"
+        ixy="3.35347967113636E-16"
+        ixz="8.46149636539923E-06"
+        iyy="0.000183745807024676"
+        iyz="-1.34330108074276E-16"
+        izz="0.000190643011582041" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/L_leg1_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/L_leg1_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="L_leg2">
+    <inertial>
+      <origin
+        xyz="0.0433566032475844 -0.013978563556407 -0.0100000000000023"
+        rpy="0 0 0" />
+      <mass
+        value="0.0913704605771619" />
+      <inertia
+        ixx="1.59115847930602E-05"
+        ixy="-9.15274215698794E-06"
+        ixz="-1.2827298765227E-19"
+        iyy="0.000107718568176025"
+        iyz="-1.52577548724923E-20"
+        izz="0.000115555396825785" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/L_leg2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/L_leg2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="L_leg1_R">
+    <inertial>
+      <origin
+        xyz="-0.050898115814726 -0.051228173586405 -0.05190990311479"
+        rpy="0 0 0" />
+      <mass
+        value="0.048089038126957" />
+      <inertia
+        ixx="9.6562281953873E-05"
+        ixy="-8.44615538524824E-05"
+        ixz="7.2332747463015E-06"
+        iyy="9.54703992079216E-05"
+        iyz="7.28018018682309E-06"
+        izz="0.000187281085804032" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/L_leg1_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/L_leg1_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="R_leg3">
+    <inertial>
+      <origin
+        xyz="0.0873324965817361 0.0110677958698842 0.00999999999999818"
+        rpy="0 0 0" />
+      <mass
+        value="0.0493852918960901" />
+      <inertia
+        ixx="5.91254112993184E-06"
+        ixy="-3.96515991581777E-06"
+        ixz="1.57800551378829E-20"
+        iyy="0.000100371565034293"
+        iyz="4.39804530749343E-21"
+        izz="0.000102535598937443" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/R_leg3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/R_leg3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="R_leg1_R">
+    <inertial>
+      <origin
+        xyz="0.10325658361132 -5.21591525526333E-09 -0.0524343515325074"
+        rpy="0 0 0" />
+      <mass
+        value="0.0488233854097336" />
+      <inertia
+        ixx="1.13633089013208E-05"
+        ixy="1.05325650571395E-12"
+        ixz="-8.46149636539916E-06"
+        iyy="0.000183745807024675"
+        iyz="5.16997275129663E-14"
+        izz="0.00019064301158204" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/R_leg1_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/R_leg1_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="R_leg2">
+    <inertial>
+      <origin
+        xyz="0.0433566032475216 -0.0139785635562044 0.0100000000000002"
+        rpy="0 0 0" />
+      <mass
+        value="0.0913704605771619" />
+      <inertia
+        ixx="1.59115847929818E-05"
+        ixy="-9.15274215659485E-06"
+        ixz="-2.39494956007369E-20"
+        iyy="0.000107718568176103"
+        iyz="-2.218164219063E-20"
+        izz="0.000115555396825785" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/R_leg2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/R_leg2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="R_leg1_L">
+    <inertial>
+      <origin
+        xyz="-0.0508895051595862 -0.0512367273254126 -0.00809009688334644"
+        rpy="0 0 0" />
+      <mass
+        value="0.048089038126957" />
+      <inertia
+        ixx="9.65906728862334E-05"
+        ixy="-8.44613655679677E-05"
+        ixz="-7.23205105876653E-06"
+        iyy="9.54420082750328E-05"
+        iyz="-7.28139577954664E-06"
+        izz="0.000187281085804563" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/R_leg1_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/R_leg1_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

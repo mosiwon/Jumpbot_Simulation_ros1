@@ -1,0 +1,248 @@
+<?xml version="1.0" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="jumpbot" xmlns:xacro="http://ros.org/wiki/xacro">
+    <link
+        name="L_arm1">
+        <inertial>
+        <origin
+            xyz="-0.00579242530675816 -0.000660568262209338 0.0392997277868803"
+            rpy="0 0 0" />
+        <mass
+            value="0.0772344881148099" />
+        <inertia
+            ixx="2.1641622308835E-05"
+            ixy="-4.84133079986496E-07"
+            ixz="1.96292319875646E-07"
+            iyy="2.58317030721296E-05"
+            iyz="2.23851786821489E-08"
+            izz="1.51644396371457E-05" />
+        </inertial>
+        <visual>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://jumpbot_description/meshes/L_arm1.STL" />
+        </geometry>
+        <material
+            name="">
+            <color
+            rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+        </material>
+        </visual>
+        <collision>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://jumpbot_description/meshes/L_arm1.STL" />
+        </geometry>
+        </collision>
+    </link>
+    <link
+        name="L_arm2">
+        <inertial>
+        <origin
+            xyz="0.0742096986932852 1.53568824323713E-12 -0.0293907814404099"
+            rpy="0 0 0" />
+        <mass
+            value="0.0880266519036123" />
+        <inertia
+            ixx="2.12845479280635E-05"
+            ixy="-6.832345567368E-16"
+            ixz="1.03651693160751E-05"
+            iyy="5.43768043952165E-05"
+            iyz="2.14005275623767E-16"
+            izz="4.55077968841721E-05" />
+        </inertial>
+        <visual>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://jumpbot_description/meshes/L_arm2.STL" />
+        </geometry>
+        <material
+            name="">
+            <color
+            rgba="1 1 1 1" />
+        </material>
+        </visual>
+        <collision>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://jumpbot_description/meshes/L_arm2.STL" />
+        </geometry>
+        </collision>
+    </link>
+    <link
+        name="L_arm3">
+        <inertial>
+        <origin
+            xyz="-0.0846234692097403 -0.00497008660565307 -0.014879977294088"
+            rpy="0 0 0" />
+        <mass
+            value="0.0621671393056517" />
+        <inertia
+            ixx="6.26827342638435E-05"
+            ixy="-3.66085857605269E-06"
+            ixz="-6.94541372568381E-06"
+            iyy="0.000142170205993413"
+            iyz="-4.70112745709243E-07"
+            izz="8.17963298452532E-05" />
+        </inertial>
+        <visual>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://jumpbot_description/meshes/L_arm3.STL" />
+        </geometry>
+        <material
+            name="">
+            <color
+            rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+        </material>
+        </visual>
+        <collision>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://jumpbot_description/meshes/L_arm3.STL" />
+        </geometry>
+        </collision>
+    </link>
+      <link
+    name="R_arm1">
+    <inertial>
+      <origin
+        xyz="0.00579242530675733 0.000660568262206673 -0.0392997277868801"
+        rpy="0 0 0" />
+      <mass
+        value="0.07723448811481" />
+      <inertia
+        ixx="2.1641622308835E-05"
+        ixy="-4.84133079986393E-07"
+        ixz="1.96292319875674E-07"
+        iyy="2.58317030721297E-05"
+        iyz="2.23851786821462E-08"
+        izz="1.51644396371457E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/R_arm1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/R_arm1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="R_arm2">
+    <inertial>
+      <origin
+        xyz="0.0742096986932864 -1.53216328513395E-12 -0.0293907814404097"
+        rpy="0 0 0" />
+      <mass
+        value="0.0880266519036124" />
+      <inertia
+        ixx="2.12845479280636E-05"
+        ixy="6.83248256558661E-16"
+        ixz="1.03651693160751E-05"
+        iyy="5.43768043952167E-05"
+        iyz="-2.14006975379756E-16"
+        izz="4.55077968841723E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/R_arm2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/R_arm2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="R_arm3">
+    <inertial>
+      <origin
+        xyz="-0.0846234692095354 -0.00497008660914752 -0.014879977294088"
+        rpy="0 0 0" />
+      <mass
+        value="0.0621671393056517" />
+      <inertia
+        ixx="6.26827342641458E-05"
+        ixy="-3.66085857933498E-06"
+        ixz="-6.94541372566429E-06"
+        iyy="0.000142170205993111"
+        iyz="-4.70112745996042E-07"
+        izz="8.1796329845253E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/R_arm3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpbot_description/meshes/R_arm3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+
+</robot>

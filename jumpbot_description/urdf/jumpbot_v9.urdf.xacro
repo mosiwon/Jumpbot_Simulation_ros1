@@ -4,6 +4,8 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot name="jumpbot" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:include filename="$(find jumpbot_description)/urdf/jumpbot_v9_shapes.urdf" />
+  <xacro:include filename="$(find jumpbot_description)/urdf/jumpbot_v9_arm.urdf" />
+  <xacro:include filename="$(find jumpbot_description)/urdf/jumpbot_v9_leg.urdf" />
   <xacro:include filename="$(find jumpbot_description)/urdf/jumpbot_v9_joint.urdf" />
   <xacro:include filename="$(find jumpbot_description)/urdf/jumpbot_v9.gazebo" />
   <xacro:include filename="$(find jumpbot_description)/urdf/jumpbot_v9.transmission" />
