@@ -323,4 +323,23 @@
       </geometry>
     </collision>
   </link>
+
+
+  <gazebo>
+    <joint name="L_motorfixed_joint" type="fixed">
+      <pose>0.18 -0.00 0.102 0 0 2.353</pose>
+      <parent>L_leg1_L</parent>
+      <child>L_motor</child>
+    </joint>
+  </gazebo>
+
+  <gazebo>
+    <joint name="R_motorfixed_joint" type="fixed">
+      <pose>0.18 -0.00 -0.102 0 0 2.353</pose>
+      <parent>R_leg1_R</parent>
+      <child>R_motor</child>
+    </joint>
+  </gazebo>
+
+  
 </robot>

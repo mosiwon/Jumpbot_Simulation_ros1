@@ -15,7 +15,7 @@
     <limit
       lower="-1.5707"
       upper="1.5707"
-      effort="100"
+      effort="1"
       velocity="1" />
   </joint>
   <joint
@@ -44,8 +44,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="0"
-      upper="0"
+      lower="-3.141592"
+      upper="3.141592"
       effort="0"
       velocity="0" />
   </joint>
@@ -62,8 +62,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="0"
-      upper="0"
+      lower="-3.141592"
+      upper="3.141592"
       effort="0"
       velocity="0" />
   </joint>
@@ -80,8 +80,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="0"
-      upper="0"
+      lower="-3.141592"
+      upper="3.141592"
       effort="0"
       velocity="0" />
   </joint>
@@ -98,8 +98,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="0"
-      upper="0"
+      lower="-3.141592"
+      upper="3.141592"
       effort="0"
       velocity="0" />
   </joint>
@@ -186,7 +186,7 @@
     <limit
       lower="-1.5707"
       upper="1.5707"
-      effort="100"
+      effort="1"
       velocity="1" />
   </joint>
   <joint
@@ -215,8 +215,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="0"
-      upper="0"
+      lower="-3.141592"
+      upper="3.141592"
       effort="0"
       velocity="0" />
   </joint>
@@ -233,8 +233,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="0"
-      upper="0"
+      lower="-3.141592"
+      upper="3.141592"
       effort="0"
       velocity="0" />
   </joint>
@@ -251,8 +251,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="0"
-      upper="0"
+      lower="-3.141592"
+      upper="3.141592"
       effort="0"
       velocity="0" />
   </joint>
@@ -269,8 +269,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="0"
-      upper="0"
+      lower="-3.141592"
+      upper="3.141592"
       effort="0"
       velocity="0" />
   </joint>
@@ -344,4 +344,20 @@
       xyz="0 0 -1" />
     <limit effort="1" velocity="1" lower="-1.5707" upper="1.5707"/>
   </joint>
+
+  <gazebo>
+    <joint name="L_motorfixed_joint" type="fixed">
+      <pose>0.18 -0.00 0.102 0 0 2.353</pose>
+      <parent>L_leg1_L</parent>
+      <child>L_motor</child>
+    </joint>
+  </gazebo>
+
+  <gazebo>
+    <joint name="R_motorfixed_joint" type="fixed">
+      <pose>0.18 -0.00 -0.102 0 0 2.353</pose>
+      <parent>R_leg1_R</parent>
+      <child>R_motor</child>
+    </joint>
+  </gazebo>
 </robot>
