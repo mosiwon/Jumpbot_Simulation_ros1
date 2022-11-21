@@ -31,78 +31,7 @@
     <axis
       xyz="0 0 1" />
   </joint>
-  <joint
-    name="L_leg3_joint"
-    type="revolute">
-    <origin
-      xyz="-0.0660000000018272 -0.0883531819184021 0.0824162107442846"
-      rpy="1.57079632681981 -0.853930194145867 -1.57079632681554" />
-    <parent
-      link="L_baselink" />
-    <child
-      link="L_leg3" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-3.141592"
-      upper="3.141592"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <joint
-    name="L_leg1_L_joint"
-    type="revolute">
-    <origin
-      xyz="0.150000000000081 0 -0.040000000000003"
-      rpy="0 0 -1.74964597766658" />
-    <parent
-      link="L_leg3" />
-    <child
-      link="L_leg1_L" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-3.141592"
-      upper="3.141592"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <joint
-    name="L_leg2_joint"
-    type="revolute">
-    <origin
-      xyz="-0.0660000000025969 -0.1254831819183 0.0453000000002221"
-      rpy="1.57079632679489 -1.00689911983256 -1.57079632681554" />
-    <parent
-      link="L_baselink" />
-    <child
-      link="L_leg2" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      lower="-3.141592"
-      upper="3.141592"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <joint
-    name="L_leg1_R_joint"
-    type="revolute">
-    <origin
-      xyz="0.15000000000002 0 0.0199999999999946"
-      rpy="0 0 0.450347739059501" />
-    <parent
-      link="L_leg2" />
-    <child
-      link="L_leg1_R" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      lower="-3.141592"
-      upper="3.141592"
-      effort="0"
-      velocity="0" />
-  </joint>
+  
   <joint
     name="L_motor_joint"
     type="fixed">
@@ -202,78 +131,7 @@
     <axis
       xyz="0 0 1" />
   </joint>
-  <joint
-    name="R_leg3_joint"
-    type="revolute">
-    <origin
-      xyz="0.065999999998173 -0.0883531819214337 0.0824162107440945"
-      rpy="1.5707963267949 -0.853721604418042 -1.57079632681554" />
-    <parent
-      link="R_baselink" />
-    <child
-      link="R_leg3" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-3.141592"
-      upper="3.141592"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <joint
-    name="R_leg1_R_joint"
-    type="revolute">
-    <origin
-      xyz="0.150000004607446 0 0.039999999999998"
-      rpy="0 0 -1.74926931149431" />
-    <parent
-      link="R_leg3" />
-    <child
-      link="R_leg1_R" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-3.141592"
-      upper="3.141592"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <joint
-    name="R_leg2_joint"
-    type="revolute">
-    <origin
-      xyz="0.0659999999974047 -0.125483181921434 0.0453000000000003"
-      rpy="1.57079632679489 -1.00668202156475 -1.57079632681554" />
-    <parent
-      link="R_baselink" />
-    <child
-      link="R_leg2" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      lower="-3.141592"
-      upper="3.141592"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <joint
-    name="R_leg1_L_joint"
-    type="revolute">
-    <origin
-      xyz="0.149999999999984 0 0.0399999999999999"
-      rpy="0 0 0.450564837327306" />
-    <parent
-      link="R_leg2" />
-    <child
-      link="R_leg1_L" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      lower="-3.141592"
-      upper="3.141592"
-      effort="0"
-      velocity="0" />
-  </joint>
+  
   <joint
     name="R_motor_joint"
     type="fixed">
@@ -345,19 +203,152 @@
     <limit effort="1" velocity="1" lower="-1.5707" upper="1.5707"/>
   </joint>
 
-  <gazebo>
-    <joint name="L_motorfixed_joint" type="fixed">
-      <pose>0.18 -0.00 0.102 0 0 2.353</pose>
-      <parent>L_leg1_L</parent>
-      <child>L_motor</child>
-    </joint>
-  </gazebo>
+    <joint
+    name="L_leg3_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0660000000018272 -0.0883531819184021 0.0824162107442846"
+      rpy="1.57079632681981 -0.853930194145867 -1.57079632681554" />
+    <parent
+      link="L_baselink" />
+    <child
+      link="L_leg3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.141592"
+      upper="3.141592"
+      effort="-1"
+      velocity="-1" />
+  </joint>
+  <joint
+    name="L_leg1_L_joint"
+    type="revolute">
+    <origin
+      xyz="0.150000000000081 0 -0.040000000000003"
+      rpy="0 0 -1.74964597766658" />
+    <parent
+      link="L_leg3" />
+    <child
+      link="L_leg1_L" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.141592"
+      upper="3.141592"
+      effort="-1"
+      velocity="-1" />
+  </joint>
+  <joint
+    name="L_leg2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0660000000025969 -0.1254831819183 0.0453000000002221"
+      rpy="1.57079632679489 -1.00689911983256 -1.57079632681554" />
+    <parent
+      link="L_baselink" />
+    <child
+      link="L_leg2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.141592"
+      upper="3.141592"
+      effort="-1"
+      velocity="-1" />
+  </joint>
+  <joint
+    name="L_leg1_R_joint"
+    type="revolute">
+    <origin
+      xyz="0.15000000000002 0 0.0199999999999946"
+      rpy="0 0 0.450347739059501" />
+    <parent
+      link="L_leg2" />
+    <child
+      link="L_leg1_R" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.141592"
+      upper="3.141592"
+      effort="-1"
+      velocity="-1" />
+  </joint>
 
-  <gazebo>
-    <joint name="R_motorfixed_joint" type="fixed">
-      <pose>0.18 -0.00 -0.102 0 0 2.353</pose>
-      <parent>R_leg1_R</parent>
-      <child>R_motor</child>
-    </joint>
-  </gazebo>
+  <joint
+    name="R_leg3_joint"
+    type="revolute">
+    <origin
+      xyz="0.065999999998173 -0.0883531819214337 0.0824162107440945"
+      rpy="1.5707963267949 -0.853721604418042 -1.57079632681554" />
+    <parent
+      link="R_baselink" />
+    <child
+      link="R_leg3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.141592"
+      upper="3.141592"
+      effort="-1"
+      velocity="-1" />
+  </joint>
+  <joint
+    name="R_leg1_R_joint"
+    type="revolute">
+    <origin
+      xyz="0.150000004607446 0 0.039999999999998"
+      rpy="0 0 -1.74926931149431" />
+    <parent
+      link="R_leg3" />
+    <child
+      link="R_leg1_R" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.141592"
+      upper="3.141592"
+      effort="-1"
+      velocity="-1" />
+  </joint>
+  <joint
+    name="R_leg2_joint"
+    type="revolute">
+    <origin
+      xyz="0.0659999999974047 -0.125483181921434 0.0453000000000003"
+      rpy="1.57079632679489 -1.00668202156475 -1.57079632681554" />
+    <parent
+      link="R_baselink" />
+    <child
+      link="R_leg2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.141592"
+      upper="3.141592"
+      effort="-1"
+      velocity="-1" />
+  </joint>
+  <joint
+    name="R_leg1_L_joint"
+    type="revolute">
+    <origin
+      xyz="0.149999999999984 0 0.0399999999999999"
+      rpy="0 0 0.450564837327306" />
+    <parent
+      link="R_leg2" />
+    <child
+      link="R_leg1_L" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.141592"
+      upper="3.141592"
+      effort="-1"
+      velocity="-1" />
+  </joint>
+
+
+  
 </robot>

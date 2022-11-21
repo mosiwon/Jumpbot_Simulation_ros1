@@ -10,6 +10,7 @@
   </gazebo>
 
 
+  <!-- joint parameters -->
   <gazebo reference="L_baselink">
 
     <mu1>0.2</mu1>
@@ -34,7 +35,7 @@
     <selfCollide>true</selfCollide>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
-    <material>Gazebo/Red</material>
+    <material>Gazebo/Grey</material>
   </gazebo>
   
   <gazebo reference="L_leg3">
@@ -96,13 +97,13 @@
     <selfCollide>true</selfCollide>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
-    <material>Gazebo/Red</material>
+    <material>Gazebo/Grey</material>
   </gazebo>
   
   <gazebo reference="R_leg3">
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
-    <material>Gazebo/Red</material>
+    <material>Gazebo/Grey</material>
   </gazebo>
 
   <gazebo reference="R_leg1_R">
@@ -139,23 +140,42 @@
     
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
-    <material>Gazebo/Red</material>
+    <material>Gazebo/Grey</material>
   </gazebo>
 
   <gazebo reference="R_arm2">
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
-    <material>Gazebo/Red</material>
+    <material>Gazebo/Grey</material>
   </gazebo>
   
   <gazebo reference="R_arm3">
     <selfCollide>true</selfCollide>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
-    <material>Gazebo/Red</material>
+    <material>Gazebo/Grey</material>
   </gazebo>
 
+  <gazebo reference="R_leg2">
   
+  <dynamics>
+      <spring_stiffness>2500</spring_stiffness>
+      <spring_reference>0.06</spring_reference>
+      <damping>20.0</damping>
+      <friction>0.75</friction>
+    </dynamics>
+    <use_parent_model_frame>0</use_parent_model_frame>
+    <physics>
+    <ode>
+      <implicit_spring_damper>1</implicit_spring_damper>
+      <cfm_damping>1</cfm_damping>
+      <limit>
+        <cfm>0</cfm>
+        <erp>0.2</erp>
+      </limit>
+    </ode>
+  </physics>
+  </gazebo>
 
   <!-- Link3 -->
 
