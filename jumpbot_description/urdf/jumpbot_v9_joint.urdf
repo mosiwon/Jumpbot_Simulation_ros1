@@ -238,6 +238,12 @@
       upper="3.141592"
       effort="-1"
       velocity="-1" />
+    <dynamics 
+      spring_stiffness="10"
+      spring_reference="10000"
+      damping="-1"
+      friction="-1"/>
+
   </joint>
   <joint
     name="L_leg2_joint"
@@ -311,6 +317,13 @@
       upper="3.141592"
       effort="-1"
       velocity="-1" />
+    <dynamics 
+      spring_stiffness="10"
+      spring_reference="10000"
+      damping="-1"
+      friction="-1"/>
+
+
   </joint>
   <joint
     name="R_leg2_joint"
