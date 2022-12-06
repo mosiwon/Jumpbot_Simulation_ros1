@@ -239,8 +239,8 @@
       effort="-1"
       velocity="-1" />
     <dynamics 
-      spring_stiffness="10"
-      spring_reference="10000"
+      spring_stiffness="0"
+      spring_reference="0"
       damping="-1"
       friction="-1"/>
 
@@ -308,7 +308,7 @@
       rpy="0 0 -1.74926931149431" />
     <parent
       link="R_leg3" />
-    <child
+    <child     
       link="R_leg1_R" />
     <axis
       xyz="0 0 -1" />
@@ -318,8 +318,8 @@
       effort="-1"
       velocity="-1" />
     <dynamics 
-      spring_stiffness="10"
-      spring_reference="10000"
+      spring_stiffness="0"
+      spring_reference="0"
       damping="-1"
       friction="-1"/>
 

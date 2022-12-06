@@ -24,7 +24,7 @@
     pkg="gazebo_ros" 
     type="spawn_model" 
     output="screen"
-    args="-urdf -model jumpbot -param robot_description -z 0.7"/>
+    args="-urdf -model jumpbot -param robot_description -z 0.41"/>
 
   <include file="$(find jumpbot_control)/launch/jumpbot_servo_control.launch" />
 
